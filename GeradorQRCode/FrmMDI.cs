@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GeradorQRCode
 {
-    public partial class Form1 : Form
+    public partial class FrmMDI : Form
     {
-        public Form1()
+        public FrmMDI()
         {
             InitializeComponent();
         }
