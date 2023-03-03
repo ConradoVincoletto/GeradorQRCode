@@ -271,6 +271,7 @@
             this.Margin = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.Name = "ucQRconfig";
             this.Size = new System.Drawing.Size(474, 471);
+            this.Load += new System.EventHandler(this.ucQRconfig_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
