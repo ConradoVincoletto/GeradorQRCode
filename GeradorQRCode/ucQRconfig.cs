@@ -61,7 +61,7 @@ namespace GeradorQRCode
 
             //Margin
             cmbMargin.Items.Clear();
-            for(int i = 1; i <= 50; i++)
+            for(int i = 0; i <= 50; i++)
                 cmbMargin.Items.Add(i);
 
             //QZone
@@ -76,11 +76,20 @@ namespace GeradorQRCode
             cmbFormat.Items.Add("gif");
             cmbFormat.Items.Add("jpeg");
             cmbFormat.Items.Add("jpg");
-            {
 
-            }
-
-
+            SetDefaultOptions();
+        }
+        public void SetDefaultOptions()
+        {
+            cmbSize.SelectedIndex = 1;
+            cmbCharsetSource.SelectedIndex = 1 ;
+            cmbCharsetTarget.SelectedIndex = 1 ;
+            cmbECC.SelectedIndex = 0;
+            cmbColor.SelectedIndex = 0;
+            cmbBGColor.SelectedIndex = 1;
+            cmbMargin.SelectedIndex = 1;
+            cmbQZone.SelectedIndex = 0;
+            cmbFormat.SelectedIndex = 0;
         }
     }
 }
