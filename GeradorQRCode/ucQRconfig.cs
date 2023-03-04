@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entidades.Configurations;
+using System;
 using System.Windows.Forms;
 
 namespace GeradorQRCode
@@ -90,6 +84,23 @@ namespace GeradorQRCode
             cmbMargin.SelectedIndex = 1;
             cmbQZone.SelectedIndex = 0;
             cmbFormat.SelectedIndex = 0;
+        }
+
+        public QRConfig GetConfig()
+        {
+            QRConfig config = new QRConfig();
+
+            config.Size = cmbSize.SelectedIndex.ToString();
+            config.CharsetSource= cmbCharsetSource.SelectedIndex.ToString();
+            config.CharsetTarget= cmbCharsetTarget.SelectedIndex.ToString(); 
+            config.Ecc = cmbECC.SelectedIndex.ToString()[0];
+            config.Color= cmbBGColor.SelectedIndex.ToString();
+            config.BgColor = cmbBGColor.SelectedIndex.ToString();
+            config.Margin = Convert.ToInt32(cmbMargin.SelectedIndex.ToString());
+            config.QZone = Convert.ToInt32(cmbQZone.SelectedIndex.ToString());
+            config.Format = cmbFormat.SelectedIndex.ToString();
+
+            return config;
         }
     }
 }
