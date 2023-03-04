@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeradorQRCode.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,7 @@ namespace GeradorQRCode
 
         private void BtnUrlType_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario(new FrmQRCodeURL());
         }
     }
 }
