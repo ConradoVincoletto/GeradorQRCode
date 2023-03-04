@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmQRCodeURL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQRCodeURL.Designer.cs">
+      <DependentUpon>FrmQRCodeURL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     <Compile Include="ucQRconfig.Designer.cs">
       <DependentUpon>ucQRconfig.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmQRCodeURL.resx">
+      <DependentUpon>FrmQRCodeURL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
     </EmbeddedResource>
