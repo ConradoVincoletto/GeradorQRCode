@@ -21,7 +21,7 @@ namespace GeradorQRCode
         {
             oFrm.MdiParent= this;
             oFrm.Top = 0;
-            oFrm.Left = 0;
+            oFrm.Left = pnlMenu.Size.Width;
             oFrm.Show();
         }
 

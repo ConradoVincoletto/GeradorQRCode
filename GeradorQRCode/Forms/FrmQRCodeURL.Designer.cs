@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ucQRconfig1 = new GeradorQRCode.ucQRconfig();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.ucQRconfig1 = new GeradorQRCode.ucQRconfig();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,16 +87,6 @@
             this.label3.Text = "QRCode";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ucQRconfig1
-            // 
-            this.ucQRconfig1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucQRconfig1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQRconfig1.Location = new System.Drawing.Point(19, 122);
-            this.ucQRconfig1.Margin = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.ucQRconfig1.Name = "ucQRconfig1";
-            this.ucQRconfig1.Size = new System.Drawing.Size(472, 408);
-            this.ucQRconfig1.TabIndex = 7;
-            // 
             // picImage
             // 
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -139,6 +129,16 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // ucQRconfig1
+            // 
+            this.ucQRconfig1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucQRconfig1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQRconfig1.Location = new System.Drawing.Point(19, 122);
+            this.ucQRconfig1.Margin = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.ucQRconfig1.Name = "ucQRconfig1";
+            this.ucQRconfig1.Size = new System.Drawing.Size(472, 408);
+            this.ucQRconfig1.TabIndex = 7;
+            // 
             // FrmQRCodeURL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +159,7 @@
             this.Name = "FrmQRCodeURL";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "QRCodeURL";
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
