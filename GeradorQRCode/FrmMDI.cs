@@ -16,5 +16,17 @@ namespace GeradorQRCode
         {
             InitializeComponent();
         }
+        private void AbrirFormulario(Form oFrm)
+        {
+            oFrm.MdiParent= this;
+            oFrm.Top = 0;
+            oFrm.Left = 0;
+            oFrm.Show();
+        }
+
+        private void BtnUrlType_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
