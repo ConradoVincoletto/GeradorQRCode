@@ -30,13 +30,13 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtURL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.ucQRconfig1 = new GeradorQRCode.ucQRconfig();
+            this.oUcQRconfig = new GeradorQRCode.ucQRconfig();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,14 +64,14 @@
             this.label1.Text = " Data";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtURL
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(19, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(468, 23);
-            this.textBox1.TabIndex = 4;
+            this.txtURL.BackColor = System.Drawing.SystemColors.Info;
+            this.txtURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtURL.Location = new System.Drawing.Point(19, 89);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Size = new System.Drawing.Size(468, 23);
+            this.txtURL.TabIndex = 4;
             // 
             // label3
             // 
@@ -106,6 +106,7 @@
             this.btnGenerate.TabIndex = 8;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = false;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // btnClean
             // 
@@ -117,6 +118,7 @@
             this.btnClean.TabIndex = 9;
             this.btnClean.Text = "Clean";
             this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // btnSave
             // 
@@ -128,16 +130,17 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // ucQRconfig1
+            // oUcQRconfig
             // 
-            this.ucQRconfig1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucQRconfig1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQRconfig1.Location = new System.Drawing.Point(19, 122);
-            this.ucQRconfig1.Margin = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.ucQRconfig1.Name = "ucQRconfig1";
-            this.ucQRconfig1.Size = new System.Drawing.Size(472, 408);
-            this.ucQRconfig1.TabIndex = 7;
+            this.oUcQRconfig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.oUcQRconfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oUcQRconfig.Location = new System.Drawing.Point(19, 122);
+            this.oUcQRconfig.Margin = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.oUcQRconfig.Name = "oUcQRconfig";
+            this.oUcQRconfig.Size = new System.Drawing.Size(472, 408);
+            this.oUcQRconfig.TabIndex = 7;
             // 
             // FrmQRCodeURL
             // 
@@ -147,10 +150,10 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.ucQRconfig1);
+            this.Controls.Add(this.oUcQRconfig);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtURL);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -170,10 +173,10 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox picImage;
-        private ucQRconfig ucQRconfig1;
+        private ucQRconfig oUcQRconfig;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnSave;

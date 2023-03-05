@@ -16,5 +16,20 @@ namespace GeradorQRCode.Forms
         {
             InitializeComponent();
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
