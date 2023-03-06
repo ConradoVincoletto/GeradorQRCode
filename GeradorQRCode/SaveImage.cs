@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +38,24 @@ namespace GeradorQRCode
             sfDialog.InitialDirectory = @"C:\Users\conra\OneDrive\Imagens\Saved Pictures";
 
             sfDialog.ShowDialog();
+
+            if (!sfDialog.FileName.Equals(string.Empty))
+            {
+                FileStream fs = (FileStream)sfDialog.OpenFile();
+                if (format.Equals("png"))
+                {
+                    imgQRCode.Save(fs, ImageFormat.Png);
+                }
+                else if (format.Equals("gif"))
+                {
+                    imgQRCode.Save(fs, ImageFormat.Gif);
+                }
+                else
+                {
+                    imgQRCode.Save(fs, ImageFormat.Jpeg);
+                }
+
+            }
         }
     }
 }
