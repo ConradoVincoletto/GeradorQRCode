@@ -17,7 +17,7 @@ namespace GeradorQRCode.Forms
         public FrmQRCodeURL()
         {
             InitializeComponent();
-            btnClean_Click(btnClean, new EventArgs());
+           
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -37,6 +37,11 @@ namespace GeradorQRCode.Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             SaveImage.Save(_imgQrCode, _format);
+        }
+
+        private void FrmQRCodeURL_Load(object sender, EventArgs e)
+        {
+            btnClean_Click(btnClean, new EventArgs());
         }
     }
 }
