@@ -36,7 +36,7 @@ namespace GeradorQRCode.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            SaveImage.Save(_imgQrCode, _format);
         }
     }
 }
