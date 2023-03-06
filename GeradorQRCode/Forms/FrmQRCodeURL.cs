@@ -12,9 +12,12 @@ namespace GeradorQRCode.Forms
 {
     public partial class FrmQRCodeURL : Form
     {
+        private Image _imgQrCode;
+        private string _format;
         public FrmQRCodeURL()
         {
             InitializeComponent();
+            btnClean_Click(btnClean, new EventArgs());
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -24,7 +27,11 @@ namespace GeradorQRCode.Forms
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-
+            _imgQrCode = null;
+            _format = string.Empty;
+            txtURL.Text = string.Empty;
+            picImage.Image = null;
+            oUcQRconfig.SetDefaultOptions();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

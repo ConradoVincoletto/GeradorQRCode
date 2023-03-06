@@ -16,20 +16,26 @@ namespace GeradorQRCode
 
             if (format.Equals("png"))
             {
-
+                sfDialog.Filter = "PNG Image |*.png";
             }
             else if (format.Equals("gif"))
             {
-
+                sfDialog.Filter = "GIF Image |*.gif";
             }
             else if (format.Equals("jpeg"))
             {
-
+                sfDialog.Filter = "JPEG Image |*.jpeg";
             }
             else if (format.Equals("jpg"))
             {
-
+                sfDialog.Filter = "JPG Image |*.jpg";
             }
+
+            sfDialog.Title = "Save QRCode";
+            sfDialog.FileName = "QRCode";
+            sfDialog.InitialDirectory = @"C:\Users\conra\OneDrive\Imagens\Saved Pictures";
+
+            sfDialog.ShowDialog();
         }
     }
 }
