@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace GeradorQRCode.Forms
 {
     public partial class FrmQRCodeURL : Form
     {
-        private Image _imgQrCode;
+        //private Image _imgQrCode;
         private string _format;
         public FrmQRCodeURL()
         {
@@ -36,12 +37,14 @@ namespace GeradorQRCode.Forms
 
             QRConfig config = oUcQRconfig.GetConfig();
 
+            string strData = WebUtility.UrlEncode(txtURL.Text.Trim());
 
+            _format = config.Format
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-            _imgQrCode = null;
+           // _imgQrCode = null;
             _format = string.Empty;
             txtURL.Text = string.Empty;
             picImage.Image = null;
