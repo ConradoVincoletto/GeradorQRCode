@@ -22,6 +22,11 @@ namespace GeradorQRCode.Forms
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            if (txtURL.Text.Trim().Equals(string.Empty))
+            {
+                MessageBox.Show("Informe um valor para o campo 'Data'!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
         }
 
