@@ -1,20 +1,15 @@
 ﻿using Entidades.Configurations;
+using GoQR.Net;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GeradorQRCode.Forms
 {
     public partial class FrmQRCodeURL : Form
     {
-        //private Image _imgQrCode;
+        private Image _imgQrCode;
         private string _format;
         public FrmQRCodeURL()
         {
@@ -39,12 +34,22 @@ namespace GeradorQRCode.Forms
 
             string strData = WebUtility.UrlEncode(txtURL.Text.Trim());
 
-            _format = config.Format
+            _format = config.Format;
+
+            _imgQrCode = new GoQRCode().GetQRCode(strData, config);
+
+            if(_imgQrCode != null)
+            {
+                picImage.BackgroundImage = _imgQrCode;
+                picImage.BackgroundImageLayout = ImageLayout.Stretch;
+                btnSave.Enabled = true;
+            }
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-           // _imgQrCode = null;
+            btnSave.Enabled = false;
+            _imgQrCode = null;
             _format = string.Empty;
             txtURL.Text = string.Empty;
             picImage.Image = null;
