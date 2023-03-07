@@ -27,6 +27,11 @@ namespace GeradorQRCode.Forms
                 MessageBox.Show("Informe um valor para o campo 'Data'!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (!txtURL.Text.Trim().Contains("http://"))
+            {
+                MessageBox.Show("Informe um valor para o campo 'Data'!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
         }
 
