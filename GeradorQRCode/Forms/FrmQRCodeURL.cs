@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades.Configurations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,11 +28,14 @@ namespace GeradorQRCode.Forms
                 MessageBox.Show("Informe um valor para o campo 'Data'!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!txtURL.Text.Trim().Contains("http://"))
+            if (!txtURL.Text.Trim().Contains("http://") && !txtURL.Text.Trim().Contains("https://"))
             {
                 MessageBox.Show("Informe um valor para o campo 'Data'!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            QRConfig config = oUcQRconfig.GetConfig();
+
 
         }
 
