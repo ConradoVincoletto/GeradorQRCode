@@ -59,7 +59,6 @@ namespace GeradorQRCode
                 cmbMargin.Items.Add(i);
 
             //QZone
-
             cmbQZone.Items.Clear();
             for (int i = 0; i < 100; i++)
                 cmbQZone.Items.Add(i);

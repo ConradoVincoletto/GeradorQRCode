@@ -26,7 +26,7 @@ namespace GeradorQRCode.Forms
             }
             if (!txtURL.Text.Trim().Contains("http://") && !txtURL.Text.Trim().Contains("https://"))
             {
-                MessageBox.Show("Informe um valor para o campo 'Data'!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Informe uma URL válida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
